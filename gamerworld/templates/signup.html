@@ -1,0 +1,35 @@
+{% extends 'plantilla.html' %}
+
+{% block content %}
+
+{% load static %}
+
+                    
+<body>
+    <section class="container">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        {{error}}
+        {% csrf_token %}
+            <div class="form-structor">
+                <div class="signup">
+                    <h2 class="form-title" id="signup"><span></span>Sign up</h2>
+                    <div class="form-holder">
+                        <input type="text" class="input" placeholder="Nombre" />
+                        <input type="text" class="input" placeholder="Apellido" />
+                        <input type="email" class="input" placeholder="Email" />
+                        <input type="password" class="input" placeholder="Password" />
+                    </div>
+                    <a href="/signup/">
+                        <button class="submit-btn" >Sign up</button>
+                    </a>
+                </div>
+                <div class="login slide-up">
+                    <div class="center">
+                        <h2 class="form-title" id="login"><span></span>Log in</h2>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+
+{% endblock %}

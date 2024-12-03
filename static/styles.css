@@ -1,0 +1,37 @@
+/* tabla*/
+
+table{
+    width: 800px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px #8b75ecd7 ;
+}
+th,
+td{
+    background-color: aqua;
+    padding: 15px;
+    color:aquamarine;
+}
+
+th{
+    text-align: left;
+}
+
+thead th{
+    background-color: chocolate;
+}
+tbody td{
+    position: relative;
+}
+tbody td:hover::before{
+    content: "";
+    position: absolute;
+    background-color: cornflowerblue;
+    left: 0;
+    right: 0;
+    top:-9999px;
+    bottom: -9999px;
+    z-index: -1;
+}

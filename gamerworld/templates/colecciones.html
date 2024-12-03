@@ -1,0 +1,55 @@
+{% extends 'plantilla.html' %}
+
+{% block content %}
+
+    <form class="w-50 shadow mx-auto p- m-5" method="post">
+
+        {% csrf_token %}
+        Codigo Videojuego<input type="number" name="nombreJuego" class="form-control">
+        Nombre<input type="text" name="nombreJuego" class="form-control">
+        Código de usuario<input type="number" name="codUsuario"class="form-control">
+        Cantidad de videojuego<input type="number" name="cantidaddvj" class="form-control">
+        Listadeseos<input type="text" name="listadeseos" class="form-control">
+        Estado<input type="text" name="estado" class="form-control">
+        <div class="text-center">  
+            <input type="submit" values="Enviar" class="btn btn-primary">   
+    
+        </div>
+
+    </form>
+    <table class="table table-danger w-75 mx-auto text-center  "  >
+        <tr class ="table-dark">
+            <th>Codigo Videojuego</th>
+            <th>Nombre</th>
+            <th>Código usuario</th>
+            <th>Cantidad de videojuego</th>
+            <th>Lista de deseos</th>
+            <th>Estado</th>
+            <th></th> <! espacios para boton de eliminar y consultar> 
+        </tr>
+
+    {% for listadeseo in listads %}
+        <tr>
+            <td>{{listadeseo.codVideojuego}}</td>
+            <td>{{listadeseo.nombreJuego}}</td>
+            <td>{{listadeseo.codUsuario}}</td>
+            <td>{{listadeseo.cantidadvdj}}</td>
+            <td>{{listadeseo.listadeseos}}</td>
+            <td>{{listadeseo.estado}}</td>
+            <td>
+                <form action="{% url 'eliminar' listadeseo.codVideojuego %}" method="post">
+
+                    {% csrf_token %}
+                    <button class="btn btn-danger" onclick="return
+                        confirm('¿Deseas eliminar este videojuego?')">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}
+</body>
+</html>    

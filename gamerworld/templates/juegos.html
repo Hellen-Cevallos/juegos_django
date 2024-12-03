@@ -1,0 +1,391 @@
+{% extends 'plantilla.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+</td>
+</tr>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f5f5f5;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    nav {
+
+        background-color: #8537a5;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 30px;
+        width: 100%;
+
+    }
+
+    .flex-container .card {
+        position: relative;
+        max-width: calc(33.33% - 20px);
+        height: 215px;
+        background-color: #FFF;
+        margin: 30px 10px;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in-out;
+        
+    }
+
+    .flex-container .card:hover {
+        height: 500px;
+    }
+
+    .flex-container .card .imgBx {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: -60px;
+        z-index: 1;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+
+
+    }
+
+    .flex-container .card .imgBx img {
+        max-width: 100%;
+        max-height: 100%;
+
+
+
+    }
+
+    .flex-container .card .content {
+        position: relative;
+        margin-top: -140px;
+        padding: 10px 15px;
+        text-align: center;
+        color: #111;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+    }
+
+    .flex-container .card:hover .content {
+        visibility: visible;
+        opacity: 1;
+        margin-top: -40px;
+        transition-delay: 0.3s;
+    }
+</style>
+
+<body>
+
+
+
+    <div class="flex-container">
+        <!-- Repeat this block for each game card -->
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/fornite.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>FORNITE</h3>
+                <p>Fortnite es un mundo de experiencias múltiples.
+                    Dejaos caer en la isla y competid hasta ser
+                    los últimos jugadores que queden en pie.Cread
+                    una isla personalizada con vuestras propias reglas.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/eldenring.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>ELDEN RING</h3>
+                <p>Álzate, Sinluz, y que la gracia te guíe para abrazar
+                    el poder del Círculo de Elden y encumbrarte como señor
+                    del Círculo en las Tierras Intermedias.
+                    En las Tierras Intermedias gobernadas por la Reina Márika,
+                    la Eterna, el Círculo de Elden, origen del Árbol Áureo,
+                    ha sido destruido.</p>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/portal2.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>PORTAL 2</h3>
+                <p>Portal 2 continúa con esa fórmula ganadora
+                    consistente en una innovadora mecánica de juego,
+                    historia y música que condujeron al Portal original
+                    a ganar más de 70 galardones y lo convirtieron en
+                    un nuevo mito de la industria.
+                </p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="flex-container">
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/valorant.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>VALORANT</h3>
+                <p>Más allá de las armas y las balas, podrás elegir a
+                    un agente dotado de habilidades versátiles,
+                    veloces y letales con las que crearás oportunidades
+                    para sobresalir. Ningún agente se jugará igual,
+                    ni ningún momento memorable se verá igual.</p>
+            </div>
+        </div>
+
+        
+
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/bioshockk.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>BIOSHOCK</h3>
+                <p>Mientras explora la ciudad de Rapture en el fondo del
+                    océano Atlántico, el personaje protagonista, Jack,
+                    se verá obligado a luchar contra seres humanos mutados
+                    debido a la adicción a una sustancia genética llamada ADAM.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/grandtheftautov.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>GRAND AND THEFT AUTO V</h3>
+                <p>Un joven estafador callejero, un ladrón de
+                    bancos retirado y un psicópata aterrador se ven
+                    involucrados con lo peor y más desquiciado del
+                    mundo criminal, del gobierno de los EE. UU. y de
+                    la industria del espectáculo. </p>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="flex-container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/thedaybefore.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>THE DAY BEFORE</h3>
+                <p>The Day Before ofrece a los jugadores un viaje
+                    singularmente reinventado hacia un MMO de
+                    supervivencia post-apocalíptico de mundo abierto
+                    ambientado en la actualidad en la costa este de EE. UU.
+                    luego de una pandemia mortal.</p>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/roguecity.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>ROBOCOP: ROGUE CITY</h3>
+                <p>La ciudad del Viejo Detroit ha sido golpeada por
+                    una ola de criminalidad, con un nuevo enemigo
+                    que amenaza la paz y el orden. Tu investigación
+                    te lleva directamente al corazón de una oscura
+                    conspiración en una historia original con
+                    sorprendentes lugares para explorar.</p>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/lordoffallen.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>LORDS OF THE FALLEN.</h3>
+                <p>En Lords of the Fallen, asumes el rol de uno
+                    de los legendarios Cruzados Oscuros, y debes
+                    recorrer los reinos de los vivos y los muertos
+                    para interrumpir el reinado de Adyr</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex-container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/callofduty.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>CALLS OF DUTY</h3>
+                <p>Cuenta una nueva historia de Zombis del desarrollador
+                    Treyarch, con misiones, características básicas de Zombis
+                    y una gran cantidad de secretos por descubrir.</p>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/ea-sports.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>EA Sports FC 24</h3>
+                <p>EA SPORTS FC™ 24 te da la bienvenida a The World's Game,
+                    con HyperMotionV, Estilos de juego optimizados por Opta
+                    y el nuevo motor revolucionario de Frostbite™</p>
+            </div>
+        </div>
+   
+
+
+
+    <div class="card">
+        <div class="imgBx">
+            <img src="static/cities.jpg" alt="">
+        </div>
+        <div class="content">
+        <h3>CITIES: SKYLINES II </h3>
+        <p>Construye una ciudad desde cero y transfórmala
+            en la metrópolis próspera que solo tú puedes imaginar.
+            Nunca experimentaste la construcción a esta escala. 
+            Con su simulación detallada y una economía viva</p>
+        </div>
+    </div>
+
+
+
+
+    </div>
+
+    <div class="flex-container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/easoports.jpg" alt="">
+            </div>
+            <div class="content">
+            <h3>EA SPORTS WRC</h3>
+            <p>El famoso modelo de conducción multisuperficie 
+                de Codemasters se ha mejorado para WRC. 
+                Personalízalo según tu nivel de habilidad y ponlo a prueba 
+                con el desgaste de las diferentes superficies.</p>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/ea-sports-f1-23-6454de487866e (1).jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>F1 23</h3>
+                    <p>F2™, el campo de entrenamiento definitivo para F1® 
+                    se ha actualizado con el último contenido de la temporada 2023,
+                    que incluye los nuevos coches y la parrilla de pilotos.</p>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <div class="imgBx">
+                <img src="static/needforapeed.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>NEED FOR SPEED</h3>
+                    <p>En Need for Speed Heat, los límites de la ley se desvanecen
+                        cuando empieza anochecer. Compite por el día en el Speedhunters 
+                        Showdown: una serie de eventos legales donde ganarás fondos 
+                        para personalizar tu propia flota</p>
+            </div>
+        </div>
+
+
+    </div>
+    
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
+{% endblock %}
+
+
+
+
+
+

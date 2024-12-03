@@ -1,0 +1,50 @@
+{% extends 'plantilla.html' %}
+
+{% block content %}
+
+    <form class="w-50 shadow mx-auto p- m-4" method="post"
+    action="{% url 'guardarjuego' %}">  
+        {% csrf_token %}
+        
+        Código Videojuego:<input type="number" name="codVideojuego" class="form-control">
+        Código Usuario:<input type="number" name="codUsuario" class="form-control">
+        Cantidad de videojuego:<input type="number" name="cantidadvdj"class="form-control">  
+        <div class="text-center">  
+        <input type="submit" values="Enviar" class="btn btn-primary">   
+        </div>
+    </form>
+    
+
+    <table class="table table-danger  w-75 mx-auto text-center  "  >
+        <tr class ="table-dark">
+
+            <th>Código Videojuego</th>
+            <th>Código Usuario</th>
+            <th>Cantidad de videojuego</th>
+    </div> 
+            <th></th> <! espacios para boton de eliminar y consultar> 
+            
+        </tr>
+    {% for carrito in carritoComp %}
+        <tr>
+            <td>{{carrito.codVideojuego}}</td>
+            <td>{{carrito.codUsuario}}</td>
+            <td>{{carrito.cantidadvdj}}</td>
+            <td>
+                <form action="{% url 'eliminar' carrito.codVideojuego %}" method="post">
+
+                    {% csrf_token %}
+                    <button class="btn btn-danger" onclick="return
+                        confirm('¿Deseas eliminar este videojuego?')">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </form>
+            </td>
+
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
+    
+</body>
+</html>    
